@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>przybornik</title>
+</head>
+
+<body>
+
+  <div id="main_container">
+
+    <div id="comparer">
+      
+      <div id="player_one" class="player-zone">
+
+        <form class="player-form">
+
+          <div class="settings-area">
+            <div class="player-counter">
+              <label for="unit_amount">
+                <p>Ilość : </p>
+                <input type="number" name="unitAmount" id="unit_amount">
+              </label>
+            </div>
+            <div class="player-techs">
+
+              <div class="player-techs__drives techs-row">
+                <label for="speed-combustion">
+                  <p>Napęd spalinowy : </p>
+                  <input type="number" name="combustionDrive" id="speed_combustion" min="0">
+                </label>
+                <label for="speed_impulse">
+                  <p>Napęd impulsowy : </p>
+                  <input type="number" name="impulseDrive" id="speed_impulse" min="0">
+                </label>
+                <label for="speed_hyperspace">
+                  <p>Napęd nadprzestrzenny : </p>
+                  <input type="number" name="hyperspaceDrive" id="speed_hyperspace" min="0">
+                </label>
+              </div>
+
+              <div class="player-techs__military techs-row">
+                <label for="military_battle">
+                  <p>Bojowa : </p>
+                  <input type="number" name="weapon" id="military_battle" min="0">
+                </label>
+                <label for="military_shields">
+                  <p>Osłony : </p>
+                  <input type="number" name="shielding" id="military_shields" min="0">
+                </label>
+                <label for="military_armor">
+                  <p>Pancerz : </p>
+                  <input type="number" name="armour" id="military_armor" min="0">
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+        </form>
+
+        <div class="player-results">
+
+          <div class="results-unit_choice">
+            <div class="tile-area"></div>
+            <div class="results-picture"><img src=""></div>
+          </div>
+
+          <div class="results-sheet">
+              <div class="stat-col stat-names"></div>
+              <div class="stat-col stat-values"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div id="player_two" class="player-zone">
+  
+        <form class="player-form">
+          
+          <div class="settings-area">
+  
+            <div class="player-counter">
+              <label for="unit_amount">
+                <p>Ilość : </p>
+                <input type="number" name="unitAmount" id="unit_amount">
+              </label>
+            </div>
+            <div class="player-techs">
+  
+              <div class="player-techs__drives techs-row">
+                <label for="speed-combustion">
+                  <p>Napęd spalinowy : </p>
+                  <input type="number" name="combustionDrive" id="speed_combustion" min="0">
+                </label>
+                <label for="speed_impulse">
+                  <p>Napęd impulsowy : </p>
+                  <input type="number" name="impulseDrive" id="speed_impulse" min="0">
+                </label>
+                <label for="speed_hyperspace">
+                  <p>Napęd nadprzestrzenny : </p>
+                  <input type="number" name="hyperspaceDrive" id="speed_hyperspace" min="0">
+                </label>
+              </div>
+  
+              <div class="player-techs__military techs-row">
+                <label for="military_battle">
+                  <p>Bojowa : </p>
+                  <input type="number" name="weapon" id="military_battle" min="0">
+                </label>
+                <label for="military_shields">
+                  <p>Osłony : </p>
+                  <input type="number" name="shielding" id="military_shields" min="0">
+                </label>
+                <label for="military_armor">
+                  <p>Pancerz : </p>
+                  <input type="number" name="armour" id="military_armor" min="0">
+                </label>
+              </div>
+  
+            </div>
+          </div>
+          
+        </form>
+
+        <div class="player-results">
+
+          <div class="results-unit_choice">
+            <div class="tile-area"></div>
+            <div class="results-picture"><img src=""></div>
+          </div>
+
+          <div class="results-sheet">              
+              <div class="stat-col stat-values"></div>
+              <div class="stat-col stat-names"></div>
+          </div>
+
+        </div>
+
+  
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <script src="./js/defence.js"></script>
+  <script src="./js/ships.js"></script>
+  <script src="./js/game.js"></script>
+
+</body>
+
+</html>

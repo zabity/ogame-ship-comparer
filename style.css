@@ -1,0 +1,174 @@
+:root {
+  --color-dark: #412860;
+  --color-font: #bda8d7;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: url('./img/bg.jpg') no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  /* width: 100vw; */
+  color: var(--color-font);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#comparer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-font);
+}
+/* player zone */
+.player-zone{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+.player-zone:first-child{
+  border-right: 1px solid var(--color-font);
+}
+/* -form */
+form.player-form{
+  display: flex;
+  flex-direction: column;
+}
+/* --settings */
+.settings-area{
+  display: flex;
+  flex-direction: column;
+}
+/* ---containers of techs and count */
+.player-techs, .player-counter{
+  display: flex;
+  flex-direction: row;
+}
+/* ----rows */
+.player-techs .techs-row{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-font);
+}
+/* -----labels(text) */
+.player-techs label,
+.player-counter label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px;
+}
+/* -----inputs */
+.player-techs .techs-row input,
+.player-counter input{
+  width: 40px;
+  margin-left: 12px;
+}
+
+
+
+
+
+
+/* results */
+/* .player-results{
+  width: 70%;
+  float: right;
+} */
+
+.player-results{
+  display: flex;
+  flex-direction: column;
+  background-color: #212;
+  box-shadow: 0 0 50px #212;
+  /* height: 450px; */
+  /* width: 70%; */
+  padding: 15px;
+  align-items: end;
+}
+
+.results-unit_choice{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#player_two .results-unit_choice{
+  flex-flow: row-reverse;
+}
+
+/* tile area */
+.tile-area{
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+}
+
+.tile-area .tile{
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.results-picture img{
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  visibility: hidden;
+}
+
+.results-sheet{
+  /* height: 95%; */
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 0 50px #212;
+  /* height: 450px; */
+  /* width: 70%; */
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  color: #ddd;
+  font-family: 'Courier New', Courier, monospace;
+}
+.stat-col{
+  text-overflow: nowrap;
+  width: 50%;
+  margin: 5px;
+}
+.results-sheet .stat-col p{
+  height: 20px;
+  margin-bottom: 10px;
+}
+.results-sheet .stat-col p:nth-child(6),
+.results-sheet .stat-col p:nth-child(9),
+.results-sheet .stat-col p:nth-child(14){
+  padding-bottom: 40px;
+  border-bottom: 1px solid #bcbcbc;
+}
+#player_one .stat-col p{
+  text-align: end;
+}
+#player_two .stat-col p{
+  text-align: start;
+}
+
+.winnerTag{
+  display: inline;
+}
+#player_one .results-sheet .stat-col p:has(.winnerTag){
+  
+}
